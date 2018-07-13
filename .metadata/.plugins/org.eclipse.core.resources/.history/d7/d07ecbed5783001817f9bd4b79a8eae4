@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: middle
+
+server:
+  port: 8301
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8302/eureka/
+  instance:
+    hostname: localhost

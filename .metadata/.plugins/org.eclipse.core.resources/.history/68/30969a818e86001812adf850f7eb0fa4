@@ -1,0 +1,81 @@
+package model;
+
+import java.util.Date;
+
+import javax.persistence.*;
+
+//import java.util.List;
+
+@Entity
+@Table (name = "planes" , catalog = "test")
+public class plane {
+
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
+	private Integer id;
+	
+	
+	@Column(name = "planeid")
+	private Integer planeID;
+	
+	
+	@Column(name = "time")
+	private Date time;
+	
+	
+	@Column(name = "x")	
+	private Double x;
+	
+	@Column(name = "y")	
+	private Double y;
+	
+
+
+	public plane() 
+	{		
+	}
+	public plane(Integer planeID , Date time , Double x , Double y ) 
+	{
+ 		this.planeID = planeID;
+		this.time = time;
+		this.x = x;
+		this.y = y;
+
+		
+	}	
+	
+	public Integer getId() {
+		return planeID;
+	}
+
+	public void setId(Integer planeID) {
+		this.planeID = planeID;
+	}
+
+	public Date getTime() {
+		return time;
+	}
+
+	public void setTime(Date time) {
+		this.time = time;
+	}
+
+	public Double getX() {
+		return x;
+	}
+
+	public void setX(Double x) {
+		this.x = x;
+	}
+
+	public Double getY() {
+		return y;
+	}
+
+	public void setY(Double y) {
+		this.y = y;
+	}
+		
+}
